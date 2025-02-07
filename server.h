@@ -15,11 +15,12 @@ public:
   bool start();
 
 private:
-  QHttpServer httpServer;
-  std::unique_ptr<QSslServer> sslServer;
-  ApiController apiController;
+  QHttpServer mi_httpServer;
+  std::unique_ptr<QSslServer> m_sslServer;
+  ApiController m_apiController;
 
   void setupRoutes();
+  bool configureSsl();
 };
 
 #endif // SERVER_H
