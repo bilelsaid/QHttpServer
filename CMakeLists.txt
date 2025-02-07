@@ -10,5 +10,5 @@ find_package(Qt6 REQUIRED COMPONENTS Core Network HttpServer)
 set(CMAKE_AUTOMOC ON)
 
 # Create an executable and link it with Qt libraries
-add_executable(QHttpServer main.cpp server.cpp server.h)
+add_executable(QHttpServer main.cpp server.cpp api_controller.cpp server.h api_controller.h)
 target_link_libraries(QHttpServer Qt6::Core Qt6::Network Qt6::HttpServer)
