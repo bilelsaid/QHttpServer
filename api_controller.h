@@ -14,6 +14,9 @@ public:
 private:
   void handleRegisterUser(const QHttpServerRequest &request,
                           QHttpServerResponder &responder);
+  void handleLoginUser(const QHttpServerRequest &request,
+                       QHttpServerResponder &responder);
+  bool verifyToken(const QHttpServerRequest &request, QString &userEmail);
 };
 
 #endif // API_CONTROLLER_H
